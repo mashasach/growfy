@@ -1,0 +1,38 @@
+$primary-color: #141c2d;
+$gradient: linear-gradient(to right, #ae88f0, #61a2d8);
+$gradient-reverse: linear-gradient(to bottom, #61a2d8, #ae88f0);
+$light-text: #dce3f1;
+$dark-text: #1a1a1a;
+
+$font-title: 'IBM Plex Sans', sans-serif;
+$font-text: 'Onest', sans-serif;
+$font-button: 'Raleway';
+
+@function Rem($pixels, $base: 16px) {
+   @return calc($pixels / $base) * 1rem;
+}
+
+$SMALLMOBILE-MAX: 575.98px;
+$MOBILE-MAX: 767.98px;
+$TABLET-MAX: 991.98px;
+$DESKTOP-MAX: 1199.98px;
+$LARGE-DESKTOP-MAX: 1439.98px;
+
+$SMALLMOBILE-MIN: 576px;
+$MOBILE-MIN: 768px;
+$TABLET-MIN: 992px;
+$DESKTOP-MIN: 1200px;
+$LARGE-DESKTOP-MIN: 1440px;
+
+
+$small-mobile-max: Rem($SMALLMOBILE-MAX);
+$mobile-max: Rem($MOBILE-MAX);
+$tablet-max: Rem($TABLET-MAX);
+$desktop-max: Rem($DESKTOP-MIN);
+$large-desktop-max: Rem($LARGE-DESKTOP-MAX);
+
+$small-mobile-min: Rem($SMALLMOBILE-MIN);
+$mobile-min: Rem($MOBILE-MIN);
+$tablet-min: Rem($TABLET-MIN);
+$desktop-min: Rem($DESKTOP-MIN);
+$large-desktop-min: Rem($LARGE-DESKTOP-MIN);

@@ -1,0 +1,71 @@
+.reviews-card {
+   padding: toRem(30) toRem(20) toRem(35) toRem(25);
+   background: rgba(129, 129, 139, 0.1);
+   border-radius: 30px;
+
+   @media (min-width: toRem(1300)) {
+      padding: toRem(64) toRem(43) toRem(70) toRem(40);
+   }
+
+   @media (min-width: $small-mobile-min) {
+      max-width: toRem(450);
+
+   }
+
+   &>*:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 33, 10)
+   }
+
+   &__person {
+      display: grid;
+      grid-template-columns: 1fr 4.5fr;
+      gap: toRem(15);
+
+   }
+
+   &__name {
+      font-size: toRem(16);
+      color: #ffffff;
+      line-height: 1.5;
+   }
+
+   &__company {
+      font-size: toRem(14);
+      color: rgba(156, 156, 156, 1);
+      line-height: 1.5;
+   }
+
+   &__title {
+      font-size: toRem(32);
+      color: #ffffff;
+      font-weight: 400;
+   }
+
+   &__text {
+      color: rgba(156, 156, 156, 1);
+      font-size: toRem(16);
+   }
+
+   &__image-wrapper {
+      aspect-ratio: 68 / 68;
+      border-radius: 0 68px 68px 68px;
+   }
+
+   &__image {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+   }
+
+   &__image--top-left {
+      border-radius: 0 68px 68px 68px;
+   }
+
+   &__image--top-right {
+      border-radius: 68px 0 68px 68px;
+   }
+
+   &__image--bottom-right {
+      border-radius: 68px 68px 0 68px;
+   }
+}

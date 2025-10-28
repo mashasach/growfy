@@ -1,0 +1,14 @@
+.button-transparent {
+   display: inline-block;
+   height: toRem(37);
+   border-radius: 12px;
+   border: 1px solid rgba(129, 129, 139, 0.2);
+   color: #9C9C9C;
+   background: transparent;
+   text-transform: uppercase;
+   font-size: 11px;
+   padding: toRem(11) toRem(18);
+   cursor: auto;
+   margin-bottom: toRem(30);
+
+}

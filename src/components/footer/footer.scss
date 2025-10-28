@@ -1,0 +1,97 @@
+.footer {
+   @include adaptiveValue("margin-block", 170, 50);
+
+
+   &__container {
+      display: grid;
+      grid-template-columns: minmax(auto, 378px) auto minmax(auto, 500px);
+      justify-content: space-between;
+      gap: toRem(28);
+
+      @media(max-width:toRem(1150)) {
+         grid-template-columns: minmax(190px, 220px) minmax(200px, 500px);
+         gap: toRem(45);
+      }
+
+      @media (max-width: $small-mobile-max) {
+         grid-template-columns: 1fr;
+      }
+   }
+
+   &__column {
+      display: flex;
+      flex-direction: column;
+      gap: toRem(30);
+
+      &:nth-child(1) {
+
+         @media (min-width: $small-mobile-min) and (max-width: toRem(1150)) {
+            grid-column: span 2;
+         }
+
+         @media (max-width: $small-mobile-max) {
+            grid-colum: auto;
+         }
+
+         @media(max-width:$tablet-max) {
+            gap: toRem(45);
+         }
+
+      }
+
+      &:nth-child(2) {
+         @media (max-width: toRem(1150)) {
+            align-items: center;
+         }
+
+         @media (max-width: $small-mobile-max) {
+            align-items: start;
+         }
+      }
+   }
+
+   &__icons {
+      display: flex;
+      gap: toRem(16);
+   }
+
+   &__nav-list {
+      display: flex;
+      flex-direction: column;
+      gap: toRem(24);
+
+      @media (max-width: $small-mobile-max) {
+         flex-direction: row;
+      }
+   }
+
+   &__nav-link {
+      &:hover {
+         text-decoration: underline;
+      }
+   }
+
+   &__label {
+      padding-bottom: toRem(10);
+      font-weight: 500;
+      font-size: toRem(20);
+      color: #ffffff;
+   }
+
+   &__input {
+      @media (max-width: $tablet-max) {
+         margin-bottom: toRem(22.5);
+      }
+   }
+
+   @media (max-width: $tablet-max) {
+      &__error-message {
+         position: absolute;
+      }
+
+      &__button {
+         margin-top: toRem(22.5)
+      }
+   }
+
+}

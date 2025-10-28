@@ -1,0 +1,20 @@
+.all-posts {
+   &__cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: toRem(48);
+      justify-content: center;
+      justify-items: center;
+
+      @media (min-width:$small-mobile-min) {
+         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      }
+
+   }
+
+   .post-card__image:hover {
+      scale: 1.02
+   }
+
+
+}

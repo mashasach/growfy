@@ -1,0 +1,65 @@
+.services-page {
+   &__items {
+      display: grid;
+      justify-items: center;
+
+      grid-template-columns: 1fr 1fr;
+      gap: toRem(20);
+
+      @media (min-width:$desktop-min) {
+         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      }
+
+      @media (max-width:$small-mobile-min) {
+         grid-template-columns: 1fr;
+      }
+   }
+
+   &__experience {
+      display: flex;
+      flex-direction: column;
+
+      @media (min-width:$small-mobile-min) {
+         flex-direction: row;
+      }
+   }
+
+   &__experience {
+      .title {
+         flex: 0 1 30%;
+         border-right: 2px solid rgb(51 51 51 / 31%);
+         padding-bottom: 0;
+         @include adaptiveValue("font-size", 26, 20);
+         padding-bottom: toRem(15);
+
+         @media (min-width:$small-mobile-min) {
+            @include adaptiveValue("padding-right", 40, 15);
+            padding-bottom: 0;
+
+         }
+      }
+   }
+
+   &__experience-text {
+      flex: 0 1 70%;
+
+      @media (min-width:$small-mobile-min) {
+         @include adaptiveValue("padding-left", 40, 15);
+
+      }
+   }
+
+   &__what-we-do {
+      display: flex;
+      justify-content: center;
+      @include adaptiveValue(" padding-block", 50, 20);
+
+
+      & .title {
+         @include adaptiveValue(" padding-block", 60, 10);
+         @include adaptiveValue("font-size", 36, 24);
+
+
+      }
+   }
+}

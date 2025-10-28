@@ -1,0 +1,28 @@
+.anim-hidden {
+   opacity: 0;
+   transform: translateY(30px);
+   transition: none;
+}
+
+.anim-visible {
+   opacity: 1;
+   transform: translateY(0);
+   transition: all 0.6s ease;
+}
+
+
+.anim-hidden--scale {
+   opacity: 0;
+   transform: scale(0.85);
+   transition: none;
+}
+
+.anim-visible--scale {
+   opacity: 1;
+   transform: scale(1);
+   transition: all 0.6s ease;
+}
+
+[data-delay] {
+   transition-delay: var(--delay, 0s);
+}

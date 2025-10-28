@@ -1,0 +1,10 @@
+  .clients {
+     @include adaptiveValue("margin-bottom", 170, 50);
+
+     &__title {
+        font-size: toRem(14);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding-bottom: toRem(45);
+     }
+  }

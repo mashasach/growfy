@@ -1,0 +1,56 @@
+.services {
+   @include adaptiveValue("margin-bottom", 170, 50);
+
+   &__container {
+      display: flex;
+      flex-direction: column;
+      gap: toRem(50);
+      align-items: center;
+
+      @media (min-width: $desktop-min) {
+         flex-direction: row;
+         @include adaptiveValue("gap", 120, 10)
+      }
+
+   }
+
+   &__info {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+
+      @media (max-width: $desktop-min) {
+         width: 100%;
+         max-width: 550px;
+      }
+
+   }
+
+   &__cards {
+      display: flex;
+      gap: toRem(31);
+
+      @media (max-width: $mobile-max) {
+         flex-direction: column;
+      }
+   }
+
+   &__cards-column {
+      display: flex;
+      flex-direction: column;
+      gap: toRem(31);
+
+   }
+
+   &__cards-column:first-child {
+      @media (min-width: $desktop-min) {
+         padding-top: toRem(48);
+      }
+   }
+}
+
+.services__info .button {
+   @media (max-width: $small-mobile-max) {
+      width: 100%;
+   }
+}

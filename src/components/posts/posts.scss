@@ -1,0 +1,24 @@
+.posts {
+   &__container {
+      @include adaptiveValue("margin-bottom", 170, 50);
+   }
+
+   &__content {
+      display: flex;
+      align-items: start;
+      flex-direction: column;
+   }
+
+   &__cards {
+      display: grid;
+      gap: toRem(48);
+      justify-items: center;
+      margin-top: toRem(40);
+
+      @media(min-width: $desktop-min) {
+         grid-template-columns: repeat(3, 1fr);
+      }
+   }
+
+
+}

@@ -1,0 +1,11 @@
+@use "sass:math";
+
+@mixin adaptiveValue($property, $maxValue, $minValue: 16, $maxWidth: 1440, $minWidth: 320) {
+   #{$property}: clamp(#{$minValue}px,
+      calc(#{$minValue}px + (#{$maxValue} - #{$minValue}) * ((100vw - #{$minWidth}px) / (#{$maxWidth} - #{$minWidth}))),
+      #{$maxValue}px);
+}
+
+@function toRem($pixels) {
+   @return math.div($pixels, 16) * 1rem;
+}

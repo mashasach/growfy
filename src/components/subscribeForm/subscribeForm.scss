@@ -1,0 +1,22 @@
+.footer {
+
+   &__form {
+      display: flex;
+      flex-direction: row;
+      gap: toRem(16);
+   }
+
+   @media (max-width: $tablet-max) {
+      &__form {
+         flex-direction: column;
+      }
+   }
+
+   @media (min-width: toRem(1150)) {
+
+      &__error-message,
+      &__status-message {
+         padding-top: toRem(10);
+      }
+   }
+}

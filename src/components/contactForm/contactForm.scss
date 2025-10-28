@@ -1,0 +1,15 @@
+.contact {
+   &-form {
+      display: flex;
+      flex-direction: column;
+      max-width: toRem(500);
+      gap: toRem(45);
+      width: 100%;
+   }
+}
+
+.error-message {
+   padding: toRem(8);
+   position: absolute;
+   font-size: toRem(14);
+}

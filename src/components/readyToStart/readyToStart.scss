@@ -1,0 +1,55 @@
+.ready-to-start {
+
+
+   &__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      background: rgba(129, 129, 139, 0.1);
+      border-radius: 30px;
+      padding-block: toRem(51);
+      gap: toRem(20);
+
+      @media (min-width: $tablet-min) {
+         flex-direction: row;
+      }
+   }
+
+   &__content {
+      flex: 0 1 50%;
+      text-align: center;
+      flex: 0 1 50%;
+      display: flex;
+      flex-direction: column;
+      gap: toRem(10);
+      align-items: center;
+
+      & .title {
+
+         max-width: toRem(360);
+         @include adaptiveValue("font-size", 32, 26);
+         font-weight: 400;
+         line-height: 1.4;
+         color: #ffffff;
+
+
+      }
+   }
+
+   &__text {
+      max-width: toRem(302);
+      margin: 0 auto;
+      font-size: toRem(16);
+   }
+
+   &__buttons {
+      display: flex;
+      flex: 0 1 50%;
+      justify-content: center;
+      align-items: center;
+      @include adaptiveValue("gap", 58, 10);
+
+   }
+
+}

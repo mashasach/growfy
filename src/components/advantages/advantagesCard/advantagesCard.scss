@@ -1,0 +1,27 @@
+.advantages {
+   &__card {
+      background-color: rgba(129, 129, 139, 0.1);
+      padding: toRem(27) toRem(25) toRem(30) toRem(25);
+      display: flex;
+      flex-direction: column;
+      border-radius: 30px;
+      max-width: auto;
+      margin: 0 auto;
+
+
+      @media (min-width:$large-desktop-min) {
+         padding: toRem(44) toRem(70) toRem(50) toRem(40);
+      }
+   }
+
+   &__value {
+      font-size: toRem(51);
+      font-weight: 500;
+   }
+
+   &__text {
+      color: #9C9C9C;
+      font-size: toRem(18);
+
+   }
+}

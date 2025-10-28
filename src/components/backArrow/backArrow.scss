@@ -1,0 +1,10 @@
+.back-arrow {
+   margin-bottom: toRem(30);
+   transition: 0.4s color ease;
+   display: flex;
+   gap: toRem(10);
+
+   &:hover {
+      color: #3D96F4;
+   }
+}

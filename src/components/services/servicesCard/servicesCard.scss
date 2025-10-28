@@ -1,0 +1,39 @@
+.services__card {
+   background: rgba(129, 129, 139, 0.1);
+   max-width: toRem(315);
+   padding: toRem(55) toRem(66) toRem(61) toRem(25);
+   border-radius: 30px;
+   text-align: left;
+
+   @media(max-width: $mobile-max) {
+      padding: toRem(25) toRem(33) toRem(31) toRem(25);
+   }
+
+   @media(max-width: $small-mobile-max) {
+      max-width: none;
+   }
+
+   &-svg {
+      max-width: toRem(75);
+      padding-bottom: toRem(15);
+   }
+
+   &-title {
+      color: #ffffff;
+      padding-bottom: toRem(10);
+      font-weight: 400;
+   }
+
+   &-text {
+      color: #81818B;
+   }
+}
+
+@media(max-width: $small-mobile-max) {
+
+   .services__card,
+   .services__title,
+   .services__text {
+      max-width: none;
+   }
+}

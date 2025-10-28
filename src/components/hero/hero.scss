@@ -1,0 +1,94 @@
+.hero {
+   @include adaptiveValue("margin-bottom", 170, 50);
+
+   &__container {
+      display: flex;
+      align-items: center;
+      gap: toRem(32);
+      @include adaptiveValue("padding-top", 44, 20);
+
+      @media(max-width: $mobile-max) {
+         flex-direction: column;
+      }
+   }
+
+   &__content {
+      flex: 0 1 60%;
+
+      @media (max-width: $mobile-min) {
+         width: 100%;
+         max-width: 550px;
+      }
+   }
+
+   &__title-wrapper {
+      max-width: toRem(510);
+   }
+
+   &__title-wrapper {
+      position: relative;
+
+      &::before {
+         content: '';
+         background: url("@/assets/images/dots.webp");
+         width: toRem(123);
+         height: toRem(123);
+         position: absolute;
+         top: toRem(-24);
+         left: toRem(-30);
+         z-index: -1;
+      }
+   }
+
+   &__images {
+      flex: 0 1 40%;
+      display: flex;
+      @include adaptiveValue("gap", 59, 10);
+      justify-content: center;
+   }
+
+   &__image-1,
+   &__image-4 {
+      border-radius: 378px;
+      aspect-ratio: 241 / 423;
+      object-fit: cover;
+   }
+
+   &__image-2 {
+      border-radius: 242px 242px 0 242px;
+      aspect-ratio: 241 / 241;
+      object-fit: cover;
+   }
+
+   &__image-3 {
+      border-radius: 242px 0 242px 242px;
+      aspect-ratio: 241 / 241;
+      object-fit: cover;
+   }
+
+
+   &__images-column {
+      flex: 0 1 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+   }
+
+   &__buttons {
+      display: flex;
+      gap: toRem(32);
+
+      @media(max-width:$small-mobile-max) {
+         flex-direction: column;
+         align-items: center;
+         gap: toRem(15);
+      }
+   }
+
+   &__buttons .button {
+      @media(max-width:$small-mobile-max) {
+         width: 100%;
+         justify-items: center;
+      }
+   }
+}

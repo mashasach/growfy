@@ -1,0 +1,52 @@
+.advantages {
+   @include adaptiveValue("margin-bottom", 170, 50);
+
+   &__container {
+      display: flex;
+      gap: toRem(32);
+      flex-direction: column;
+      align-items: center;
+
+      @media (min-width: $tablet-min) {
+         flex-direction: row;
+         align-items: stretch;
+      }
+   }
+
+   &__cards {
+      display: grid;
+      flex: 0 1 60%;
+      gap: toRem(32);
+      grid-template-columns: 1fr;
+
+
+      @media (min-width: $small-mobile-min) {
+         grid-template-columns: 1fr 1fr;
+         grid-template-rows: 1fr 1fr;
+      }
+
+      @media (min-width: $large-desktop-min) {
+         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+         gap: toRem(32)
+      }
+
+   }
+
+   &__images {
+      aspect-ratio: 499 / 588;
+      border-radius: 0 378px 378px 378px;
+      flex: 0 0 40%;
+      flex-grow: 0;
+
+
+
+      & img {
+         height: 100%;
+         width: 100%;
+         object-fit: cover;
+         border-radius: 0 378px 378px 378px;
+
+
+      }
+   }
+}
