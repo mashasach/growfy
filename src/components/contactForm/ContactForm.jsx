@@ -4,29 +4,34 @@ import { useForm } from 'react-hook-form';
 import axios from 'axios';
 
 const ContactForm = () => {
+   const [statusMessage, setStatusMessage] = React.useState('');
+   const [isError, setIsError] = React.useState(false);
+
    const {
       register,
       handleSubmit,
       reset,
-      formState: { errors },
+      formState: { errors, isSubmitting },
    } = useForm({
       mode: 'onChange',
    });
 
    const onSubmit = async (data) => {
+      setStatusMessage('');
+      const API_URL = 'http://localhost:3001/api/contact';
+
       try {
-
-         const API_URL = 'http://localhost:3001/api/contact';
          const response = await axios.post(API_URL, data);
-
-         alert('Message sent successfully!');
+         setStatusMessage('Message sent successfully!');
          reset();
+
       } catch (error) {
-         console.error(
-            'Error:',
-            error.response ? error.response.data : error.message
+
+         console.error('API Error:', error.message);
+         setStatusMessage(
+            'Server is not available on GitHub pages.'
          );
-         alert('Sending error: Please try again later.');
+         reset();
       }
    };
 
@@ -82,9 +87,19 @@ const ContactForm = () => {
          </div>
 
 
-         <button className="button button--accent" type="submit">
-            Send
+         <button
+            className="button button--accent"
+            type="submit"
+            disabled={isSubmitting}
+         >
+            {isSubmitting ? 'Sending...' : 'Send'}
          </button>
+         {statusMessage && (
+            <p className={`${isError ? 'error-message' : 'status-message'}`}>
+               {statusMessage}
+            </p>
+         )
+         }
       </form>
    );
 };
