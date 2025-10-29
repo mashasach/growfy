@@ -7,6 +7,9 @@ import useAnimatedAppearance from '@/hooks/useAnimatedAppearance.jsx';
 import '@/styles/animation.scss';
 
 export default function PostPage() {
+   const BASE_URL = import.meta.env.BASE_URL;
+   const SPRITE_URL = `${BASE_URL}sprite.svg?v-2#`;
+
    const { ref, isVisible } = useAnimatedAppearance();
    const { id } = useParams();
    const post = postsData.find(p => p.id === Number(id));
@@ -43,7 +46,9 @@ export default function PostPage() {
                      </div>
                      <Link className="post-card__info-link" to='/posts' >
                         <svg className="icon icon-arrow-left" width="24" height="24" fill="currentColor">
-                           <use href="/sprite.svg?v-1#icon-arrow-left" />
+
+                           <use href={`${SPRITE_URL}icon-arrow-left`} />
+
                         </svg>
                         to all post</Link>
                   </div>
