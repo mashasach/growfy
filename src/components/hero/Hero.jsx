@@ -24,7 +24,7 @@ const Hero = () => {
             <div className="hero__container">
                <div className="hero__content">
                   <div className="hero__title-wrapper">
-                     <Title level={1} animated titleText={'Marketing solutions that grow your business.'} />
+                     <Title level={1} animated titleText={'Marketing solutions that grow your business'} />
                   </div>
 
                   <BaseText

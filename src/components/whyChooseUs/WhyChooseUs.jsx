@@ -33,7 +33,7 @@ const WhyChooseUs = () => {
                <ButtonTransparent buttonText={'why choose us'} />
 
 
-               <Title animated titleText={'We help great brands scale with content marketing.'} level={2} />
+               <Title animated titleText={'We help great brands scale with content marketing'} level={2} />
 
 
                <Basetext baseText={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor.'} />
