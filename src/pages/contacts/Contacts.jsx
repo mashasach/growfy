@@ -7,6 +7,9 @@ import useAnimatedAppearance from '@/hooks/useAnimatedAppearance.jsx';
 import '@/styles/animation.scss';
 
 const Contacts = () => {
+  const BASE_URL = import.meta.env.BASE_URL;
+  const SPRITE_URL = `${BASE_URL}sprite.svg?v-2#`;
+
   const { ref: refInfo1, isVisible: isInfoVisible1 } = useAnimatedAppearance();
   const { ref: refInfo2, isVisible: isInfoVisible2 } = useAnimatedAppearance();
   const { ref: refInfo3, isVisible: isInfoVisible3 } = useAnimatedAppearance();
@@ -24,7 +27,7 @@ const Contacts = () => {
             <a href="tel:0650694504" ref={refInfo1} className={`contact__details-item  ${isInfoVisible1 ? "anim-visible" : "anim-hidden"}`}
               style={{ "--delay": "0.2s" }} data-delay >
               <svg className="contact__details-icon" width="24" height="24" fill="currentColor">
-                <use href="/sprite.svg?v-2#icon-phone" />
+                <use href={`${SPRITE_URL}icon-phone`} />
               </svg>
               <span className="contact__details-value">+380 55 555 55 55</span>
             </a>
@@ -33,7 +36,7 @@ const Contacts = () => {
             <a href="mailto:example@gmail.com" ref={refInfo2} className={`contact__details-item  ${isInfoVisible2 ? "anim-visible" : "anim-hidden"}`}
               style={{ "--delay": "0.2s" }} data-delay >
               <svg className="contact__details-icon" width="24" height="24" fill="currentColor">
-                <use href="/sprite.svg?v-2#icon-mail" />
+                <use href={`${SPRITE_URL}icon-mail`} />
               </svg>
               <span className="contact__details-value">example@gmail.com</span>
             </a>

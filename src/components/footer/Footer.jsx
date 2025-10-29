@@ -8,6 +8,8 @@ import '@/styles/animation.scss';
 
 
 const Footer = () => {
+   const BASE_URL = import.meta.env.BASE_URL;
+   const SPRITE_URL = `${BASE_URL}sprite.svg?v-2#`;
 
    const { ref: ref1, isVisible: isVisible1 } = useAnimatedAppearance();
    const { ref: ref2, isVisible: isVisible2 } = useAnimatedAppearance();
@@ -29,27 +31,31 @@ const Footer = () => {
                <div className="footer__icons">
                   <Link className="footer__link" to='/' aria-label="Перейти до нашого linkedin">
                      <svg className="footer__icon icon-linkedin" width="36" height="36" fill="currentColor">
-                        <use href="/sprite.svg?#icon-linkedin" />
+                        <use href={`${SPRITE_URL}icon-linkedin`} />
                      </svg>
                   </Link>
                   <Link className="footer__link" to='/' aria-label="Перейти до нашого twitter">
                      <svg className="footer__icon  icon-twitter" width="36" height="36" fill="currentColor">
-                        <use href="/sprite.svg?#icon-twitter" />
+
+                        <use href={`${SPRITE_URL}icon-twitter`} />
                      </svg>
                   </Link>
                   <Link className="footer__link" to='/' aria-label="Перейти до нашого facebook">
                      <svg className="footer__icon icon-facebook" width="36" height="36" fill="currentColor">
-                        <use href="/sprite.svg?#icon-facebook" />
+
+                        <use href={`${SPRITE_URL}icon-facebook`} />
                      </svg>
                   </Link>
                   <Link className="footer__link" to='/' aria-label="Перейти до нашого youtube">
                      <svg className="footer__icon icon-youtube" width="36" height="36" fill="currentColor">
-                        <use href="/sprite.svg?#icon-youtube" />
+
+                        <use href={`${SPRITE_URL}icon-youtube`} />
                      </svg>
                   </Link>
                   <Link className="footer__link" to='/' aria-label="Перейти до нашого instagram">
                      <svg className="footer__icon icon-instagram" width="36" height="36" fill="currentColor">
-                        <use href="/sprite.svg?#icon-instagram" />
+
+                        <use href={`${SPRITE_URL}icon-instagram`} />
                      </svg>
                   </Link>
                </div>

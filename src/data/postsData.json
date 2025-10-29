@@ -1,7 +1,7 @@
 [
    {
       "id": 1,
-      "image": "/images/posts/post1.webp",
+      "image": "images/posts/post1.webp",
       "title": "How to Use Social Proof in Marketing",
       "excerpt": "Social proof builds trust and increases conversions by showing that others already value your product. ",
       "content": [
@@ -14,7 +14,7 @@
    },
    {
       "id": 2,
-      "image": "/images/posts/post2.webp",
+      "image": "images/posts/post2.webp",
       "title": "Make a great first impression with these titles",
       "excerpt": "A strong title instantly captures attention and sets the tone for your message. Choose clear, catchy words that spark curiosity and make readers want to learn more.",
       "content": [
@@ -26,7 +26,7 @@
    },
    {
       "id": 3,
-      "image": "/images/posts/post3.webp",
+      "image": "images/posts/post3.webp",
       "title": "How to Grab Your Reader’s Attention",
       "excerpt": "Capturing attention starts with a strong hook that speaks directly to your audience’s needs. Use clear language, emotional triggers, or surprising facts to make readers curious",
       "content": [
@@ -39,7 +39,7 @@
    },
    {
       "id": 4,
-      "image": "/images/posts/post4.webp",
+      "image": "images/posts/post4.webp",
       "title": "Turn Curiosity Into Action",
       "excerpt": "Curiosity is a powerful driver — when people feel intrigued, they naturally want to explore more. Start by presenting an unexpected idea, a bold promise, or a thought-provoking question that sparks interest.",
       "content": [
@@ -52,7 +52,7 @@
    },
    {
       "id": 5,
-      "image": "/images/posts/post5.webp",
+      "image": "images/posts/post5.webp",
       "title": "Build Trust Through Authenticity",
       "excerpt": "Trust isn’t created overnight — it grows when your message feels honest and human. Show real experiences, speak with transparency, and let your audience see the genuine side of your brand.",
       "content": [
